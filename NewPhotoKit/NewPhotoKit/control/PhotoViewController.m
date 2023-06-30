@@ -35,6 +35,7 @@
     [backBtn setTitle:@"Back" forState:normal];
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:backBtn];
+    
     self.containView = [[UIContainView alloc]initWithFrame:CGRectMake(0, 88, self.view.bounds.size.width, self.view.bounds.size.height) delegate:self];
     self.containView.backgroundColor = UIColor.redColor;
     [self.view addSubview:self.containView];

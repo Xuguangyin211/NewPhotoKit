@@ -21,7 +21,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame: frame];
     if (self) {
-        [self subviews];
+        [self subViews];
     }
     return self;
 }
@@ -32,8 +32,8 @@
     self.myScrollView.userInteractionEnabled = NO;
     [self addSubview:self.myScrollView];
 
-    UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake((self.frame.size.width - 10)/2, 0, 10, 10)];
-    view.image = [UIImage imageNamed:@"icon"];
+    UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake((self.frame.size.width - 4)/2, 25, 4, 15)];
+    view.backgroundColor = UIColor.blackColor;
     [self addSubview:view];
 }
 

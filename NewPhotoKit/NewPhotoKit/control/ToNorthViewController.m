@@ -18,20 +18,33 @@
 
 @implementation ToNorthViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
 - (ToNorthView *)firstView {
     if (!_firstView) {
         float w = 224;
-        _firstView = [[ToNorthView alloc]initWithFrame:CGRectMake((self.view.bounds.size.width - w)/2, 100, w, 50)];
-        _firstView.backgroundColor = UIColor.yellowColor;
+        _firstView = [[ToNorthView alloc]initWithFrame:CGRectMake((self.view.bounds.size.width - w)/2, (self.view.bounds.size.height - 50)/2, w, 50)];
         _firstView.degr(20).cali(w/10).creat();
-        [self.view addSubview:_firstView];
     }
     return _firstView;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setUpView];
+    [self locationMap];
+}
+
+- (void)setUpView {
+    self.view.backgroundColor = UIColor.whiteColor;
+
+    UIButton *backBtn = [[UIButton alloc]init];
+    backBtn.frame = CGRectMake(10, 44, 80, 30);
+    backBtn.backgroundColor = UIColor.grayColor;
+    [backBtn setTitle:@"Back" forState:normal];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:backBtn];
+
+    [self.view addSubview:self.firstView];
 }
 
 - (void)locationMap {
@@ -47,14 +60,10 @@
     self.firstView.degree = degrees;
 }
 
-/*
-#pragma mark - Navigation
+- (void)backClick {
+    [self dismissViewControllerAnimated:YES completion:^{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    }];
 }
-*/
 
 @end

@@ -46,12 +46,12 @@
     }
 
 - (void)initCapture {
-    UIButton *back = [[UIButton alloc]init];
-    back.frame = CGRectMake(10, 44, 40, 20);
-    back.backgroundColor = UIColor.whiteColor;
-    [back setTitle:@"BACK" forState:normal];
-    [back addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:back];
+    UIButton *backBtn = [[UIButton alloc]init];
+    backBtn.frame = CGRectMake(10, 44, 80, 30);
+    backBtn.backgroundColor = UIColor.grayColor;
+    [backBtn setTitle:@"Back" forState:normal];
+    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:backBtn];
     
     if (!backFacingCameraDeviceInput) {
         return;
@@ -95,15 +95,5 @@
 - (void)dealloc {
     NSLog(@"yess");
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

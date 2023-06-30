@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8487C47C2A4D68540009CF21 /* ReachAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C47B2A4D68540009CF21 /* ReachAbility.m */; };
 		84FB07792A4920B500FBD72D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB07782A4920B500FBD72D /* AppDelegate.m */; };
 		84FB077C2A4920B500FBD72D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB077B2A4920B500FBD72D /* SceneDelegate.m */; };
 		84FB077F2A4920B500FBD72D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB077E2A4920B500FBD72D /* ViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8487C47A2A4D68540009CF21 /* ReachAbility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReachAbility.h; path = NewPhotoKit/ReachAbility.h; sourceTree = SOURCE_ROOT; };
+		8487C47B2A4D68540009CF21 /* ReachAbility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReachAbility.m; path = NewPhotoKit/ReachAbility.m; sourceTree = SOURCE_ROOT; };
 		84FB07742A4920B500FBD72D /* NewPhotoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewPhotoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB07772A4920B500FBD72D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84FB07782A4920B500FBD72D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 		84FB07B22A4A713100FBD72D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				8487C47A2A4D68540009CF21 /* ReachAbility.h */,
+				8487C47B2A4D68540009CF21 /* ReachAbility.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			files = (
 				84FB077F2A4920B500FBD72D /* ViewController.m in Sources */,
 				84FB07BF2A4BCF6F00FBD72D /* ToNorthView.m in Sources */,
+				8487C47C2A4D68540009CF21 /* ReachAbility.m in Sources */,
 				84FB07BC2A4A71D200FBD72D /* CameraViewController.m in Sources */,
 				84FB07B12A4934FA00FBD72D /* PhotoCollectionViewCell.m in Sources */,
 				84FB07792A4920B500FBD72D /* AppDelegate.m in Sources */,

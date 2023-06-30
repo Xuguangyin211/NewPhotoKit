@@ -27,5 +27,9 @@
 	<string>Photo library is needed so that you can pick photos from it. </string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>PLOTT would like to add a photo for you.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>location</string>
 </dict>
 </plist>
