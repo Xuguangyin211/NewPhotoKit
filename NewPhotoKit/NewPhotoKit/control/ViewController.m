@@ -10,12 +10,19 @@
 #import "PhotoViewController.h"
 #import "ToNorthViewController.h"
 #import "ReachAbility.h"
+#import "CodeInputView.h"
+#import "ScrollSliderViewController.h"
+#import "NSObject+YYmod.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) NSArray *array;
 @property (nonatomic, strong) UIButton *camera;
 @property (nonatomic, strong) UIButton *photos;
 @property (nonatomic, strong) UIButton *north;
 @property (nonatomic, strong) UIButton *wifiStatus;
+@property (nonatomic, strong) UIButton *scrollView;
+@property (nonatomic, strong) CodeInputView *codeInput;
 @end
 
 @implementation ViewController
@@ -23,60 +30,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.array = @[
+        @{@"CameraViewController": @"Camera"},
+        @{@"PhotoViewController": @"Photo"},
+        @{@"ToNorthViewController": @"North"},
+        @{@"ScrollSliderViewController": @"Scroll"},
+        @{@"ViewC": @"Status"},
+        @{@"ViewC": @"verityCode"},
+    ];
     [self setupViews];
+    [self randoms];
 }
 
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
     CGFloat x = (self.view.bounds.size.width - 130)/2;
 
-    self.camera = [[UIButton alloc]initWithFrame:CGRectMake(x, 100, 130, 44)];
-    self.camera.backgroundColor = UIColor.redColor;
-    [self.camera setTitle:@"camera" forState:normal];
-    [self.camera addTarget:self action:@selector(getCameraView) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.camera];
+    self.table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+    [self.table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ccca"];
+    self.table.delegate = self;
+    self.table.dataSource = self;
+    [self.view addSubview:self.table];
 
-    self.photos = [[UIButton alloc] initWithFrame:CGRectMake(x, 200, 130, 44)];
-    self.photos.backgroundColor = UIColor.blueColor;
-    [self.photos setTitle:@"Photo" forState:normal];
-    [self.photos addTarget:self action:@selector(getPhotoView) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.photos];
-
-    self.north = [[UIButton alloc]initWithFrame:CGRectMake(x, 300, 130, 44)];
-    self.north.backgroundColor = UIColor.greenColor;
-    [self.north setTitle:@"North" forState:normal];
-    [self.north addTarget:self action:@selector(getToNorthView) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.north];
-
-    self.wifiStatus = [[UIButton alloc]initWithFrame:CGRectMake(x, 400, 130, 44)];
-    self.wifiStatus.backgroundColor = UIColor.blackColor;
-    [self.wifiStatus setTitle:@"Status" forState:normal];
-    [self.wifiStatus addTarget:self action:@selector(getIphoneWifiStatus) forControlEvents:UIControlEventTouchDown];
-    [self.view addSubview:self.wifiStatus];
 }
 
-- (void)getCameraView {
-    CameraViewController *cv = [[CameraViewController alloc] init];
-    cv.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:cv animated:YES completion:^{
-        [self removeFromParentViewController];
-    }];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.array.count;
 }
 
-- (void)getPhotoView {
-    PhotoViewController *pv = [[PhotoViewController alloc] init];
-    pv.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:pv animated:YES completion:^{
-        [self removeFromParentViewController];
-    }];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ccca" forIndexPath:indexPath];
+    
+    NSDictionary *dic = self.array[indexPath.row];
+    NSString *descption = [dic allValues][0];
+    cell.textLabel.text = descption;
+    return cell;
 }
 
-- (void)getToNorthView {
-    ToNorthViewController *toNor = [[ToNorthViewController alloc]init];
-    toNor.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:toNor animated:YES completion:^{
-
-    }];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dic = self.array[indexPath.row];
+    NSString *vcName = [dic allKeys][0];
+    if (![vcName isEqual: @"ViewC"]) {
+        UIViewController *vc = [[NSClassFromString(vcName) alloc]init];
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [self presentViewController:vc animated:YES completion:^{
+            [self removeFromParentViewController];
+        }];
+    } else {
+        if (indexPath.row == 4) {
+            [self getIphoneWifiStatus];
+        } else if (indexPath.row == 5) {
+            [self addMEE];
+        }
+    }
 }
 
 - (void)getIphoneWifiStatus {
@@ -111,6 +117,59 @@
     }];
     [ac addAction:aa];
     [self presentViewController:ac animated:YES completion:nil];
+}
+
+- (void)addMEE {
+    _codeInput = [[CodeInputView alloc] initWithFrame:CGRectMake(20, ([UIScreen mainScreen].bounds.size.height - 200)/2, [UIScreen mainScreen].bounds.size.width - 40, 200)];
+    [self.view addSubview:_codeInput];
+    _codeInput.center = self.view.center;
+    [self.codeInput becomeFirstResponder];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches.allObjects lastObject];
+    BOOL result = [touch.view isDescendantOfView:self.codeInput];
+    if (!result) {
+        NSLog(@"ccc");
+        [self.codeInput removeFromSuperview];
+    }
+}
+
+- (void)randoms {
+    //    NSMutableArray *arr = [[NSMutableArray alloc]init];
+    //    for (NSInteger i = 32; i < 129; i++) {
+    //        NSString *m = [NSString stringWithFormat:@"%ld",(long)i];
+    //        [arr addObject:m];
+    //    }
+    //
+    //    NSMutableArray *rest = [[NSMutableArray alloc]initWithCapacity:arr.count];
+    //    NSInteger m = arr.count;
+    //    for (NSInteger i = 0; i < m; i++) {
+    //        NSInteger index = arc4random_uniform((unsigned int)arr.count);
+    //        [rest addObject:[arr objectAtIndex:index]];
+    //        [arr removeObjectAtIndex:index];
+    //    }
+    //    for (NSInteger i = 0; i < rest.count; i++) {
+    //        NSLog(@"%@", rest[i]);
+    //    }
+    //    [rest addObject:@" "];
+    //    [rest addObject:@" "];
+    //    NSLog(@"%lu", (unsigned long)rest.count);
+    //
+    //多年前，有人在山上种了棵树，短短几十年，长势却很喜人，已经跟另一座山上几百年的古树一样，枝叶繁茂了。现在猛然发现这棵树的根烂了，该怎么救治？
+    //
+    //    for (NSInteger i = 1 ; i <= 9; i++) {
+    //        NSString *m;
+    //        for (NSInteger j = 0; j < 11; j++) {
+    //            NSInteger index = 11 * i + j;
+    //            NSString *s = [NSString stringWithFormat:@"%@", rest[index]];
+    //            NSLog(@"%@", s);
+    //        }
+    //        NSLog(@"%@", m);
+    //    }
+    NSString *str = @"";
+    NSString *a = [NSObject setEncode:str isPlus:YES num:2];
+    NSString *b = [NSObject getDecode:str isPlus:YES num:2];
 }
 
 @end
