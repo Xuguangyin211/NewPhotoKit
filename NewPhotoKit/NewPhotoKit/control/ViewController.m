@@ -36,7 +36,8 @@
         @{@"ToNorthViewController": @"North"},
         @{@"ScrollSliderViewController": @"Scroll"},
         @{@"ViewC": @"Status"},
-        @{@"ViewC": @"verityCode"},
+        @{@"ViewC": @"VerityCode"},
+        @{@"SelectionBoxViewController": @"Picker"},
     ];
     [self setupViews];
     [self randoms];
@@ -44,14 +45,12 @@
 
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
-    CGFloat x = (self.view.bounds.size.width - 130)/2;
 
     self.table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     [self.table registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ccca"];
     self.table.delegate = self;
     self.table.dataSource = self;
     [self.view addSubview:self.table];
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -60,7 +59,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ccca" forIndexPath:indexPath];
-    
+
     NSDictionary *dic = self.array[indexPath.row];
     NSString *descption = [dic allValues][0];
     cell.textLabel.text = descption;
@@ -136,6 +135,11 @@
 }
 
 - (void)randoms {
+    
+//    NSString *str = @"";
+//    NSString *a = [NSObject setEncode:str isPlus:NO num:6];
+//    NSString *b = [NSObject getDecode:a isPlus:NO num:6];
+
     //    NSMutableArray *arr = [[NSMutableArray alloc]init];
     //    for (NSInteger i = 32; i < 129; i++) {
     //        NSString *m = [NSString stringWithFormat:@"%ld",(long)i];
@@ -156,7 +160,7 @@
     //    [rest addObject:@" "];
     //    NSLog(@"%lu", (unsigned long)rest.count);
     //
-    //多年前，有人在山上种了棵树，短短几十年，长势却很喜人，已经跟另一座山上几百年的古树一样，枝叶繁茂了。现在猛然发现这棵树的根烂了，该怎么救治？
+    
     //
     //    for (NSInteger i = 1 ; i <= 9; i++) {
     //        NSString *m;
@@ -167,9 +171,6 @@
     //        }
     //        NSLog(@"%@", m);
     //    }
-    NSString *str = @"";
-    NSString *a = [NSObject setEncode:str isPlus:YES num:2];
-    NSString *b = [NSObject getDecode:str isPlus:YES num:2];
 }
 
 @end

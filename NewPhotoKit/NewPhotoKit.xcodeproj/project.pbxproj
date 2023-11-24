@@ -13,6 +13,23 @@
 		8487C4952A5B92550009CF21 /* CodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C4942A5B92550009CF21 /* CodeView.m */; };
 		8487C4982A5B92A30009CF21 /* CodeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C4972A5B92A20009CF21 /* CodeInputView.m */; };
 		8487C4A92A5CF39E0009CF21 /* NSObject+YYmod.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C4A82A5CF39E0009CF21 /* NSObject+YYmod.m */; };
+		84AD7E4F2B0AEF3C007DA797 /* PickerView+BR.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E4E2B0AEF3C007DA797 /* PickerView+BR.m */; };
+		84AD7E522B0B4D0D007DA797 /* StringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E512B0B4D0D007DA797 /* StringPickerView.m */; };
+		84AD7E552B0B4EF3007DA797 /* ResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E542B0B4EF3007DA797 /* ResultModel.m */; };
+		84AD7E592B0C9E21007DA797 /* AddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E582B0C9E21007DA797 /* AddressPickerView.m */; };
+		84AD7E5C2B0C9E4C007DA797 /* AddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E5B2B0C9E4C007DA797 /* AddressModel.m */; };
+		84AD7E612B0CA92D007DA797 /* InfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E602B0CA92D007DA797 /* InfoModel.m */; };
+		84AD7E642B0D8EDE007DA797 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E632B0D8EDE007DA797 /* UIImage+Color.m */; };
+		84AD7E672B0D93ED007DA797 /* UIColor+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AD7E662B0D93ED007DA797 /* UIColor+Add.m */; };
+		84BBC4392B0EEC0F008AF5A7 /* PickerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84BBC4382B0EEC0F008AF5A7 /* PickerView.bundle */; };
+		84C298422B01FEB00045146E /* SelectionBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C298402B01FEB00045146E /* SelectionBoxViewController.m */; };
+		84C298492B02074A0045146E /* InfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C298482B02074A0045146E /* InfoViewCell.m */; };
+		84C298512B0216520045146E /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84C298502B0216520045146E /* dataList.plist */; };
+		84C298572B0308890045146E /* NSDate+BGPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C298562B0308890045146E /* NSDate+BGPickerView.m */; };
+		84C2985A2B031EAF0045146E /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C298592B031EAF0045146E /* BaseView.m */; };
+		84C2985E2B04B2CA0045146E /* PickerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C2985D2B04B2CA0045146E /* PickerStyle.m */; };
+		84C298642B05C15C0045146E /* PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C298632B05C15C0045146E /* PickerView.m */; };
+		84C298672B05C17B0045146E /* NSBundle+PickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C298662B05C17B0045146E /* NSBundle+PickerView.m */; };
 		84FB07792A4920B500FBD72D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB07782A4920B500FBD72D /* AppDelegate.m */; };
 		84FB077C2A4920B500FBD72D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB077B2A4920B500FBD72D /* SceneDelegate.m */; };
 		84FB077F2A4920B500FBD72D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FB077E2A4920B500FBD72D /* ViewController.m */; };
@@ -61,6 +78,40 @@
 		8487C4972A5B92A20009CF21 /* CodeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeInputView.m; sourceTree = "<group>"; };
 		8487C4A52A5CF3330009CF21 /* NSObject+YYmod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYmod.h"; sourceTree = "<group>"; };
 		8487C4A82A5CF39E0009CF21 /* NSObject+YYmod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYmod.m"; sourceTree = "<group>"; };
+		84AD7E4D2B0AEF3C007DA797 /* PickerView+BR.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PickerView+BR.h"; sourceTree = "<group>"; };
+		84AD7E4E2B0AEF3C007DA797 /* PickerView+BR.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PickerView+BR.m"; sourceTree = "<group>"; };
+		84AD7E502B0B4D0D007DA797 /* StringPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringPickerView.h; sourceTree = "<group>"; };
+		84AD7E512B0B4D0D007DA797 /* StringPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringPickerView.m; sourceTree = "<group>"; };
+		84AD7E532B0B4EF3007DA797 /* ResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultModel.h; sourceTree = "<group>"; };
+		84AD7E542B0B4EF3007DA797 /* ResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultModel.m; sourceTree = "<group>"; };
+		84AD7E572B0C9E21007DA797 /* AddressPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressPickerView.h; sourceTree = "<group>"; };
+		84AD7E582B0C9E21007DA797 /* AddressPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressPickerView.m; sourceTree = "<group>"; };
+		84AD7E5A2B0C9E4C007DA797 /* AddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressModel.h; sourceTree = "<group>"; };
+		84AD7E5B2B0C9E4C007DA797 /* AddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressModel.m; sourceTree = "<group>"; };
+		84AD7E5F2B0CA92D007DA797 /* InfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoModel.h; sourceTree = "<group>"; };
+		84AD7E602B0CA92D007DA797 /* InfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoModel.m; sourceTree = "<group>"; };
+		84AD7E622B0D8EDE007DA797 /* UIImage+Color.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		84AD7E632B0D8EDE007DA797 /* UIImage+Color.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		84AD7E652B0D93ED007DA797 /* UIColor+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Add.h"; sourceTree = "<group>"; };
+		84AD7E662B0D93ED007DA797 /* UIColor+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Add.m"; sourceTree = "<group>"; };
+		84BBC4382B0EEC0F008AF5A7 /* PickerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PickerView.bundle; sourceTree = "<group>"; };
+		84C2983F2B01FEB00045146E /* SelectionBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectionBoxViewController.h; sourceTree = "<group>"; };
+		84C298402B01FEB00045146E /* SelectionBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectionBoxViewController.m; sourceTree = "<group>"; };
+		84C298472B02074A0045146E /* InfoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewCell.h; sourceTree = "<group>"; };
+		84C298482B02074A0045146E /* InfoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewCell.m; sourceTree = "<group>"; };
+		84C2984F2B0214770045146E /* address.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = address.geojson; sourceTree = "<group>"; };
+		84C298502B0216520045146E /* dataList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
+		84C298552B0308890045146E /* NSDate+BGPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+BGPickerView.h"; sourceTree = "<group>"; };
+		84C298562B0308890045146E /* NSDate+BGPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BGPickerView.m"; sourceTree = "<group>"; };
+		84C298582B031EAF0045146E /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
+		84C298592B031EAF0045146E /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
+		84C2985B2B04A63B0045146E /* PickerViewMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerViewMacro.h; sourceTree = "<group>"; };
+		84C2985C2B04B2CA0045146E /* PickerStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerStyle.h; sourceTree = "<group>"; };
+		84C2985D2B04B2CA0045146E /* PickerStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerStyle.m; sourceTree = "<group>"; };
+		84C298622B05C15C0045146E /* PickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickerView.h; sourceTree = "<group>"; };
+		84C298632B05C15C0045146E /* PickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickerView.m; sourceTree = "<group>"; };
+		84C298652B05C17B0045146E /* NSBundle+PickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PickerView.h"; sourceTree = "<group>"; };
+		84C298662B05C17B0045146E /* NSBundle+PickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PickerView.m"; sourceTree = "<group>"; };
 		84FB07742A4920B500FBD72D /* NewPhotoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewPhotoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FB07772A4920B500FBD72D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84FB07782A4920B500FBD72D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +168,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84AD7E562B0C9DB2007DA797 /* PPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				84BBC4382B0EEC0F008AF5A7 /* PickerView.bundle */,
+				84C298622B05C15C0045146E /* PickerView.h */,
+				84C298632B05C15C0045146E /* PickerView.m */,
+				84C298582B031EAF0045146E /* BaseView.h */,
+				84C298592B031EAF0045146E /* BaseView.m */,
+				84C298472B02074A0045146E /* InfoViewCell.h */,
+				84C298482B02074A0045146E /* InfoViewCell.m */,
+				84AD7E4D2B0AEF3C007DA797 /* PickerView+BR.h */,
+				84AD7E4E2B0AEF3C007DA797 /* PickerView+BR.m */,
+				84C298652B05C17B0045146E /* NSBundle+PickerView.h */,
+				84C298662B05C17B0045146E /* NSBundle+PickerView.m */,
+				84C298552B0308890045146E /* NSDate+BGPickerView.h */,
+				84C298562B0308890045146E /* NSDate+BGPickerView.m */,
+				84C2985C2B04B2CA0045146E /* PickerStyle.h */,
+				84C2985D2B04B2CA0045146E /* PickerStyle.m */,
+				84AD7E502B0B4D0D007DA797 /* StringPickerView.h */,
+				84AD7E512B0B4D0D007DA797 /* StringPickerView.m */,
+				84AD7E572B0C9E21007DA797 /* AddressPickerView.h */,
+				84AD7E582B0C9E21007DA797 /* AddressPickerView.m */,
+			);
+			path = PPickerView;
+			sourceTree = "<group>";
+		};
 		84FB076B2A4920B500FBD72D = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +229,9 @@
 				84FB07852A4920B600FBD72D /* LaunchScreen.storyboard */,
 				84FB07882A4920B600FBD72D /* Info.plist */,
 				84FB07892A4920B600FBD72D /* main.m */,
+				84C2984F2B0214770045146E /* address.geojson */,
+				84C298502B0216520045146E /* dataList.plist */,
+				84C2985B2B04A63B0045146E /* PickerViewMacro.h */,
 			);
 			path = NewPhotoKit;
 			sourceTree = "<group>";
@@ -176,8 +256,18 @@
 		84FB07B22A4A713100FBD72D /* model */ = {
 			isa = PBXGroup;
 			children = (
+				84AD7E532B0B4EF3007DA797 /* ResultModel.h */,
+				84AD7E542B0B4EF3007DA797 /* ResultModel.m */,
+				84AD7E5A2B0C9E4C007DA797 /* AddressModel.h */,
+				84AD7E5B2B0C9E4C007DA797 /* AddressModel.m */,
+				84AD7E5F2B0CA92D007DA797 /* InfoModel.h */,
+				84AD7E602B0CA92D007DA797 /* InfoModel.m */,
+				84AD7E652B0D93ED007DA797 /* UIColor+Add.h */,
+				84AD7E662B0D93ED007DA797 /* UIColor+Add.m */,
 				8487C47A2A4D68540009CF21 /* ReachAbility.h */,
 				8487C47B2A4D68540009CF21 /* ReachAbility.m */,
+				84AD7E622B0D8EDE007DA797 /* UIImage+Color.h */,
+				84AD7E632B0D8EDE007DA797 /* UIImage+Color.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -185,6 +275,7 @@
 		84FB07B42A4A715100FBD72D /* view */ = {
 			isa = PBXGroup;
 			children = (
+				84AD7E562B0C9DB2007DA797 /* PPickerView */,
 				84FB07AF2A4934FA00FBD72D /* PhotoCollectionViewCell.h */,
 				84FB07B02A4934FA00FBD72D /* PhotoCollectionViewCell.m */,
 				84FB07AC2A49263200FBD72D /* UIContainView.h */,
@@ -216,6 +307,8 @@
 				8487C4812A4EBA230009CF21 /* ScrollSliderViewController.m */,
 				8487C4A52A5CF3330009CF21 /* NSObject+YYmod.h */,
 				8487C4A82A5CF39E0009CF21 /* NSObject+YYmod.m */,
+				84C2983F2B01FEB00045146E /* SelectionBoxViewController.h */,
+				84C298402B01FEB00045146E /* SelectionBoxViewController.m */,
 			);
 			path = control;
 			sourceTree = "<group>";
@@ -325,7 +418,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				84FB07872A4920B600FBD72D /* LaunchScreen.storyboard in Resources */,
+				84BBC4392B0EEC0F008AF5A7 /* PickerView.bundle in Resources */,
 				84FB07842A4920B600FBD72D /* Assets.xcassets in Resources */,
+				84C298512B0216520045146E /* dataList.plist in Resources */,
 				84FB07822A4920B500FBD72D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,19 +447,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				8487C4A92A5CF39E0009CF21 /* NSObject+YYmod.m in Sources */,
+				84C2985E2B04B2CA0045146E /* PickerStyle.m in Sources */,
 				8487C4982A5B92A30009CF21 /* CodeInputView.m in Sources */,
+				84C2985A2B031EAF0045146E /* BaseView.m in Sources */,
 				84FB077F2A4920B500FBD72D /* ViewController.m in Sources */,
 				84FB07BF2A4BCF6F00FBD72D /* ToNorthView.m in Sources */,
 				8487C47F2A4E6DF00009CF21 /* ScrollSliderView.m in Sources */,
+				84C298672B05C17B0045146E /* NSBundle+PickerView.m in Sources */,
 				8487C47C2A4D68540009CF21 /* ReachAbility.m in Sources */,
+				84AD7E5C2B0C9E4C007DA797 /* AddressModel.m in Sources */,
 				84FB07BC2A4A71D200FBD72D /* CameraViewController.m in Sources */,
+				84AD7E612B0CA92D007DA797 /* InfoModel.m in Sources */,
+				84C298572B0308890045146E /* NSDate+BGPickerView.m in Sources */,
 				84FB07B12A4934FA00FBD72D /* PhotoCollectionViewCell.m in Sources */,
+				84AD7E592B0C9E21007DA797 /* AddressPickerView.m in Sources */,
+				84C298422B01FEB00045146E /* SelectionBoxViewController.m in Sources */,
 				8487C4822A4EBA230009CF21 /* ScrollSliderViewController.m in Sources */,
+				84C298492B02074A0045146E /* InfoViewCell.m in Sources */,
 				84FB07792A4920B500FBD72D /* AppDelegate.m in Sources */,
 				84FB07C22A4BFDB400FBD72D /* ToNorthViewController.m in Sources */,
+				84AD7E552B0B4EF3007DA797 /* ResultModel.m in Sources */,
 				8487C4952A5B92550009CF21 /* CodeView.m in Sources */,
 				84FB078A2A4920B600FBD72D /* main.m in Sources */,
+				84AD7E672B0D93ED007DA797 /* UIColor+Add.m in Sources */,
+				84AD7E4F2B0AEF3C007DA797 /* PickerView+BR.m in Sources */,
+				84AD7E522B0B4D0D007DA797 /* StringPickerView.m in Sources */,
+				84C298642B05C15C0045146E /* PickerView.m in Sources */,
 				84FB077C2A4920B500FBD72D /* SceneDelegate.m in Sources */,
+				84AD7E642B0D8EDE007DA797 /* UIImage+Color.m in Sources */,
 				84FB07AE2A49263200FBD72D /* UIContainView.m in Sources */,
 				84FB07B92A4A71C400FBD72D /* PhotoViewController.m in Sources */,
 			);
@@ -543,6 +653,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8VCD54R65;
 				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewPhotoKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -555,9 +666,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = xuguangyin.NewPhotoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = Swift.h;
@@ -578,6 +690,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8VCD54R65;
 				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewPhotoKit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -590,9 +703,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = xuguangyin.NewPhotoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = Swift.h;

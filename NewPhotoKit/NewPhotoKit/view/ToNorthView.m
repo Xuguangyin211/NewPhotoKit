@@ -140,7 +140,7 @@
 
 - (Calibration)cali {
     __weak typeof(self) weakSelf = self;
-    return  ^(float value){
+    return ^(float value){
         self.calibration = value;
         return weakSelf;
     };
